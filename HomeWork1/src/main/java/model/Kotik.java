@@ -92,12 +92,8 @@ public class Kotik {
 
     }
 
-    public static void setCount(int count) {
-        Kotik.count = count;
-    }
-
     public static int getCount() {
-        return count;
+        return count++;
     }
 
     public void setPrettiness(int prettiness) {
