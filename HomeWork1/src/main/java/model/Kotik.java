@@ -6,14 +6,22 @@ public class Kotik {
     private int catSatiety = 22;
     private static int count = 0;
 
+    public Kotik(int prettiness, String name, int weight, String meow) {
+        this.prettiness = prettiness;
+        this.name = name;
+        this.weight = weight;
+        this.meow = meow;
+        count++;
+    }
+
+    public Kotik() {
+        count++;
+    }
+
     public void liveAnotherDay() {
         int rnd;
         int H = 5;
         for (int i = 0; i < 24; i++) {
-            if (catSatiety <= 0) {
-                System.out.println(name + " хочет есть");
-                eat();
-            }
             rnd = (int) (Math.random() * H + 1);
             switch (rnd) {
                 case 1:
@@ -36,33 +44,74 @@ public class Kotik {
     }
 
     public boolean play() {
-        System.out.println(name + " поиграл с клубком");
-        catSatiety--;
-        return false;
+        boolean b = false;
+        if (catSatiety <= 0) {
+            return b;
+        }
+        if (false) {
+            System.out.println(name + " хочет есть");
+            eat();
+        } else {
+            System.out.println(name + " поиграл с клубком");
+            catSatiety--;
+        }
+        return true;
     }
 
     public boolean sleep() {
-        System.out.println(name + " поспал на кровати");
-        catSatiety--;
-        return false;
+        if (catSatiety <= 0) {
+            return false;
+        }
+        if (false) {
+            System.out.println(name + " хочет есть");
+            eat();
+        } else {
+            System.out.println(name + " поспал на кровати");
+            catSatiety--;
+        }
+        return true;
     }
 
     public boolean chaseMouse() {
-        System.out.println(name + " поймал мышь");
-        catSatiety--;
-        return false;
+        if (catSatiety <= 0) {
+            return false;
+        }
+        if (false) {
+            System.out.println(name + " хочет есть");
+            eat();
+        } else {
+            System.out.println(name + " поймал мышь");
+            catSatiety--;
+        }
+        return true;
     }
 
     public boolean walk() {
-        System.out.println(name + " погулял на улице");
-        catSatiety--;
-        return false;
+        if (catSatiety <= 0) {
+            return false;
+        }
+        if (false) {
+            System.out.println(name + " хочет есть");
+            eat();
+        } else {
+            System.out.println(name + " погулял на улице");
+            catSatiety--;
+        }
+        return true;
     }
 
     public boolean jump() {
-        System.out.println(name + " попрыгал на диван");
-        catSatiety--;
-        return false;
+        if (catSatiety <= 0) {
+            return false;
+        }
+        if (false) {
+            System.out.println(name + " хочет есть");
+            eat();
+        } else {
+            System.out.println(name + " попрыгал на диван");
+            catSatiety--;
+        }
+        return true;
     }
 
     public void eat(int catSatiety) {
@@ -77,23 +126,10 @@ public class Kotik {
 
     public void eat() {
         eat(catSatiety, "Вискас");
-        System.out.println(name + " поел");
-        catSatiety++;
-    }
-
-    public Kotik(int prettiness, String name, int weight, String meow) {
-        this.prettiness = prettiness;
-        this.name = name;
-        this.weight = weight;
-        this.meow = meow;
-    }
-
-    public Kotik() {
-
     }
 
     public static int getCount() {
-        return count++;
+        return count;
     }
 
     public void setPrettiness(int prettiness) {
