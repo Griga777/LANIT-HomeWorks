@@ -2,9 +2,8 @@ package animals;
 
 import food.Food;
 import food.Grass;
-import food.Meat;
 
-public class Herbivores extends Animals {
+public class Herbivores extends Animal {
 
     public String toString() {
         return "Травоядные";

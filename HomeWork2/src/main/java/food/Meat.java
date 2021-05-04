@@ -7,11 +7,6 @@ public class Meat extends Food {
         return "мясо";
     }
 
-    @Override
-    public void eat(Food food) {
-        super.eat(food);
-    }
-
     public int getSatiety() {
         return satiety++;
     }

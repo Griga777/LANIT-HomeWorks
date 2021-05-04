@@ -1,9 +1,6 @@
-import animals.Animals;
-import animals.Herbivores;
+import animals.Animal;
 import animals.Voice;
 import food.Food;
-import food.Grass;
-import food.Meat;
 
 public class Worker {
     private String name;
@@ -20,11 +17,11 @@ public class Worker {
         return name;
     }
 
-    public void feed(Animals animals, Food food) {
-        animals.eat(food);
+    public void feed(Animal animal, Food food) {
+        animal.eat(food);
     }
 
-    public void getVoice(Voice animals) {
-        System.out.println(animals.toString() + " " + animals.makeVoice());
+    public void getVoice(Voice animal) {
+        System.out.println(animal.toString() + " " + animal.makeVoice());
     }
 }

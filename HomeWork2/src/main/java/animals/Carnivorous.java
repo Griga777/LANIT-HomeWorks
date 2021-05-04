@@ -3,7 +3,7 @@ package animals;
 import food.Food;
 import food.Meat;
 
-public class Carnivorous extends Animals {
+public class Carnivorous extends Animal {
 
     public String toString() {
         return "Плотоядные";
