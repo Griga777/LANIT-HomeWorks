@@ -44,13 +44,10 @@ public class Kotik {
     }
 
     public boolean play() {
-        boolean b = false;
         if (catSatiety <= 0) {
-            return b;
-        }
-        if (false) {
             System.out.println(name + " хочет есть");
             eat();
+            return false;
         } else {
             System.out.println(name + " поиграл с клубком");
             catSatiety--;
@@ -60,11 +57,9 @@ public class Kotik {
 
     public boolean sleep() {
         if (catSatiety <= 0) {
-            return false;
-        }
-        if (false) {
             System.out.println(name + " хочет есть");
             eat();
+            return false;
         } else {
             System.out.println(name + " поспал на кровати");
             catSatiety--;
@@ -74,11 +69,9 @@ public class Kotik {
 
     public boolean chaseMouse() {
         if (catSatiety <= 0) {
-            return false;
-        }
-        if (false) {
             System.out.println(name + " хочет есть");
             eat();
+            return false;
         } else {
             System.out.println(name + " поймал мышь");
             catSatiety--;
@@ -88,11 +81,9 @@ public class Kotik {
 
     public boolean walk() {
         if (catSatiety <= 0) {
-            return false;
-        }
-        if (false) {
             System.out.println(name + " хочет есть");
             eat();
+            return false;
         } else {
             System.out.println(name + " погулял на улице");
             catSatiety--;
@@ -102,11 +93,9 @@ public class Kotik {
 
     public boolean jump() {
         if (catSatiety <= 0) {
-            return false;
-        }
-        if (false) {
             System.out.println(name + " хочет есть");
             eat();
+            return false;
         } else {
             System.out.println(name + " попрыгал на диван");
             catSatiety--;
@@ -115,13 +104,16 @@ public class Kotik {
     }
 
     public void eat(int catSatiety) {
+        this.catSatiety = catSatiety;
         System.out.println("Степень сытости " + name + " равна " + catSatiety);
-        catSatiety++;
+        this.catSatiety++;
     }
 
     public void eat(int catSatiety, String nameFood) {
+        this.catSatiety = catSatiety;
+        this.nameFood = nameFood;
         System.out.println("Степень сытости " + name + " равна " + catSatiety + ", он ест " + nameFood);
-        catSatiety++;
+        this.catSatiety++;
     }
 
     public void eat() {
