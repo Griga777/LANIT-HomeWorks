@@ -9,11 +9,6 @@ public class Fish extends Herbivores implements Swim {
     }
 
     @Override
-    public void eat(Food food) {
-        super.eat(food);
-    }
-
-    @Override
     public void canSwim() {
         System.out.println(toString() + " плавает в пруду");
     }

@@ -9,11 +9,6 @@ public class Duck extends Herbivores implements Fly, Swim, Voice {
     }
 
     @Override
-    public void eat(Food food) {
-        super.eat(food);
-    }
-
-    @Override
     public void canFly() {
         System.out.println(toString() + " летит");
     }
