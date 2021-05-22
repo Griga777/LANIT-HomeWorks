@@ -1,17 +1,9 @@
 package animals;
 
-import aviaries.SizeAviary;
-
 public class Eagle extends Carnivorous implements Fly, Voice {
-    protected SizeAviary sizeAviary = SizeAviary.HUGE;
 
     public String toString() {
         return "Резвый";
-    }
-
-    @Override
-    public SizeAviary getSizeAviary() {
-        return sizeAviary;
     }
 
     @Override

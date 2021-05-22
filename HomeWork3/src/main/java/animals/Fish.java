@@ -1,17 +1,9 @@
 package animals;
 
-import aviaries.SizeAviary;
-
 public class Fish extends Herbivores implements Swim {
-    protected SizeAviary sizeAviary = SizeAviary.SMALL;
 
     public String toString() {
         return "Флаундер";
-    }
-
-    @Override
-    public SizeAviary getSizeAviary() {
-        return sizeAviary;
     }
 
     @Override

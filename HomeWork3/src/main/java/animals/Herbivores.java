@@ -3,8 +3,7 @@ package animals;
 import food.Food;
 import food.Grass;
 
-public class Herbivores<SizeAviary> extends Animal {
-    protected SizeAviary sizeAviary;
+public class Herbivores extends Animal {
 
     public String toString() {
         return "Травоядные";
@@ -18,11 +17,6 @@ public class Herbivores<SizeAviary> extends Animal {
     @Override
     public String getName() {
         return toString();
-    }
-
-    @Override
-    public SizeAviary getSizeAviary() {
-        return sizeAviary;
     }
 
     @Override

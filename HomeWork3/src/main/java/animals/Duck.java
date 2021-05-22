@@ -1,17 +1,9 @@
 package animals;
 
-import aviaries.SizeAviary;
-
 public class Duck extends Herbivores implements Fly, Swim, Voice {
-    protected SizeAviary sizeAviary = SizeAviary.MEDIUM;
 
     public String toString() {
         return "Дональд";
-    }
-
-    @Override
-    public SizeAviary getSizeAviary() {
-        return sizeAviary;
     }
 
     @Override

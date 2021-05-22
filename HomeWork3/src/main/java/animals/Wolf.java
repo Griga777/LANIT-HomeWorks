@@ -1,17 +1,9 @@
 package animals;
 
-import aviaries.SizeAviary;
-
 public class Wolf extends Carnivorous implements Run, Swim, Voice {
-    protected SizeAviary sizeAviary = SizeAviary.LARGE;
 
     public String toString() {
         return "Шарик";
-    }
-
-    @Override
-    public SizeAviary getSizeAviary() {
-        return sizeAviary;
     }
 
     @Override

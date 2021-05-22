@@ -1,17 +1,9 @@
 package animals;
 
-import aviaries.SizeAviary;
-
 public class Giraffe extends Herbivores implements Run, Voice {
-    protected SizeAviary sizeAviary = SizeAviary.HUGE;
 
     public String toString() {
         return "Длинный";
-    }
-
-    @Override
-    public SizeAviary getSizeAviary() {
-        return sizeAviary;
     }
 
     @Override

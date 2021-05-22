@@ -1,12 +1,13 @@
 import animals.*;
 import aviaries.Aviary;
+import aviaries.WrongAviaryException;
 import food.Food;
 import food.Grass;
 import food.Meat;
 
 public class Zoo {
 
-    public static void main(String[] args) throws IllegalArgumentException, WrongFoodException {
+    public static void main(String[] args) throws WrongFoodException, WrongAviaryException {
 
         Animal duck = new Duck();
         Animal fish = new Fish();

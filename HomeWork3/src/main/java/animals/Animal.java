@@ -1,9 +1,10 @@
 package animals;
 
+import aviaries.SizeAviary;
 import food.Food;
 import java.util.Objects;
 
-public abstract class Animal<SizeAviary> {
+public abstract class Animal {
     protected String name;
     protected SizeAviary sizeAviary;
 
@@ -15,7 +16,9 @@ public abstract class Animal<SizeAviary> {
         return name;
     }
 
-    public abstract SizeAviary getSizeAviary();
+    public SizeAviary getSizeAviary() {
+        return sizeAviary;
+    }
 
     @Override
     public boolean equals(Object o) {
