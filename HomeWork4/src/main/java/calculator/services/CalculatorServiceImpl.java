@@ -61,7 +61,7 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public void longCalculations() {
-        ioService.out("Ответ на главный вопрос жизни, вселенной и всего такого");
+        ioService.out("Пусть весь мир подождёт");
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
