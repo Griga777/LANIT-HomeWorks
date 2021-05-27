@@ -1,5 +1,6 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,7 +19,7 @@ public class FindSomethingOnAvito {
     public static void main(String[] args) {
 
         try {
-            Thread.sleep(1_000);
+            Thread.sleep(3_000);
         } catch (InterruptedException e){
             e.printStackTrace();
         }
@@ -69,7 +70,11 @@ public class FindSomethingOnAvito {
     private static void fieldCityVladivostok() {
 
         driver.findElement(By.xpath("//div[@class='main-text-2PaZG']")).click();
-        driver.findElement(By.xpath("//input[@class='suggest-input-3p8yi']")).sendKeys("Владивосток");
+
+        WebDriverWait wait = new WebDriverWait(driver, 25);
+        params = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class='suggest-input-3p8yi']")));
+        params.sendKeys("Владивосток");
+
         driver.findElement(By.xpath("//li[@data-marker='suggest(0)']")).click();
 
         WebElement button = driver.findElement(By.xpath("//button[@class='button-button-2Fo5k button-size-m-7jtw4 button-primary-1RhOG']"));
