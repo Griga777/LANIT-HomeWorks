@@ -9,8 +9,8 @@ public class StepsWithCategories {
         return Categories.valueOf(category);
     }
 
-    @И("в выпадающем списке категорий выбрана {categories}")
+    @И("в выпадающем списке категорий выбрать {categories}")
     public void printCategories(Categories category) {
-        System.out.println("Выбрана категория " + category.value + "\n");
+        System.out.println("Выбрана категория: " + category.value + "\n");
     }
 }
