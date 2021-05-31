@@ -75,7 +75,8 @@ public class FindSomethingOnAvito {
         params = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class='suggest-input-3p8yi']")));
         params.sendKeys("Владивосток");
 
-        driver.findElement(By.xpath("//li[@data-marker='suggest(0)']")).click();
+        params = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@data-marker='suggest(0)']")));
+        params.click();
 
         WebElement button = driver.findElement(By.xpath("//button[@class='button-button-2Fo5k button-size-m-7jtw4 button-primary-1RhOG']"));
         button.click();
