@@ -67,14 +67,28 @@ public class HomeTaskApiTest {
 
         System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
 
+        Order order = new Order();
+        int id = new Random().nextInt(10);
+        int petId = new Random().nextInt(10);
+        int quantity = new Random().nextInt(10);
+        order.setId(id);
+        order.setPetId(petId);
+        order.setQuantity(quantity);
+
         given()
-                .pathParam("orderId", System.getProperty("orderId"))
+                .body(order)
+                .when()
+                .post("/store/order")
+                .then()
+                .statusCode(200);
+        given()
+                .pathParam("orderId", id)
                 .when()
                 .delete("/store/order/{orderId}")
                 .then()
                 .statusCode(200);
         given()
-                .pathParam("orderId", System.getProperty("orderId"))
+                .pathParam("orderId", id)      //System.getProperty("orderId")
                 .when()
                 .get("/store/order/{orderId}")
                 .then()
